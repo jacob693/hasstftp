@@ -1,11 +1,7 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
 FROM $BUILD_FROM
 
 RUN apk add --no-cache tftp-hpa
-
-## Uncomment the following options if not using home assistant os
-# VOLUME /share/srv/tftp
-# EXPOSE 69/udp
 
 # Copy data for add-on
 COPY run.sh /
