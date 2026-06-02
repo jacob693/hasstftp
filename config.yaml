@@ -10,7 +10,9 @@ arch:
   - armv7
   - i386
 
-map: ["share"]
+# Changing "share" to "share:rw" gives the container read/write access
+map:
+  - "share:rw"
 
 ports:
   69/udp: 69
